@@ -5,7 +5,7 @@ body {
 
 header {
     background-color: #0056b3;
-    /* slightly darker to fix contrast warning */
+    /* darker blue */
     color: #fff;
     padding: 1rem;
     display: flex;
@@ -28,13 +28,11 @@ header h1 {
     /* hide hamburger for larger screens */
 }
 
-.navigation {
+header nav {
     display: flex;
-    /* use flex by default */
     gap: 1rem;
     /* space between links */
     flex-direction: row;
-    /* row layout for larger screens */
 }
 
 .navigation a {
