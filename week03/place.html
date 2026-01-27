@@ -20,60 +20,49 @@
 
 <body>
 
-    <!-- Header -->
     <header>
         <h1>Welcome to South Africa</h1>
-        <nav>
-            <ul>
-                <li><a href="#culture">Culture</a></li>
-                <li><a href="#landscapes">Landscapes</a></li>
-                <li><a href="#weather">Weather</a></li>
-            </ul>
-        </nav>
     </header>
 
-    <!-- Main content -->
     <main>
 
-        <!-- Hero Section -->
-        <section id="hero">
+        <section class="hero">
             <picture>
-                <source srcset="images/south-african-view-small.jpg" media="(max-width: 500px)">
-                <source srcset="images/south-african-view-medium.jpg" media="(max-width: 1000px)">
-                <img src="images/south-african-view.jpg" alt="Country View">
+                <source srcset="images/hero-small.webp" media="(max-width: 500px)">
+                <source srcset="images/hero-medium.webp" media="(max-width: 1000px)">
+                <img src="images/south-african-view.webp" alt="Country View">
             </picture>
-
         </section>
 
-        <!-- Culture Section -->
-        <section id="culture">
+        <section>
             <h2>Culture</h2>
             <p>South Africa is known for its diverse cultures, languages, and traditions.</p>
         </section>
 
-        <!-- Landscapes Section -->
-        <section id="landscapes">
+        <section>
             <h2>Landscapes</h2>
             <p>The country features breathtaking landscapes including mountains, beaches, and wildlife reserves.</p>
         </section>
 
-        <!-- Weather Section -->
         <section id="weather">
-            <h2>Weather ⛅</h2>
-            <p>Current Temperature: <span id="temperature">8</span> °C</p>
-            <p>Wind Speed: <span id="windSpeed">10</span> km/h</p>
+            <h2>Weather</h2>
+            <img src="images/weather.svg" alt="Cloudy weather icon">
+            <p>Current Temperature: 8 °C</p>
+            <p>Wind Speed: 10 km/h</p>
             <p>Wind Chill: <span id="windChill">--</span> °C</p>
-            <img src="images/cloudy-weather-icon.png" alt="Cloudy weather icon">
         </section>
 
     </main>
 
-    <!-- Footer -->
     <footer>
-        <p>&copy; 2026 Martha Sibiya. Last Modified: <span id="lastModified"></span></p>
+        <p>
+            © <span id="year"></span> Martha Sibiya.
+            Last Modified: <span id="lastModified"></span>
+        </p>
     </footer>
 
 </body>
+
 
 
 </html>
