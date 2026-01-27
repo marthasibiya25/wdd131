@@ -3,6 +3,7 @@
     --primary-color: #005f73;
     --secondary-color: #0a9396;
     --background-color: #f4f4f4;
+    --text-color: #222;
 }
 
 /* reset */
@@ -10,6 +11,7 @@ body {
     margin: 0;
     font-family: Arial, sans-serif;
     background-color: var(--background-color);
+    color: var(--text-color);
 }
 
 /* header */
@@ -35,9 +37,13 @@ main {
     height: auto;
 }
 
-/* weather icon decoration */
-#weather img::after {
+/* weather section decoration using ::after */
+#weather::after {
     content: "";
+    display: block;
+    height: 2px;
+    background-color: var(--secondary-color);
+    margin-top: 0.5rem;
 }
 
 /* footer */
