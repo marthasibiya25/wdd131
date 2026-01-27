@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Meta info -->
+    <meta name="description" content="Explore the beauty, culture, and attractions of South Africa.">
+    <meta name="author" content="Martha Sibiya">
+
+    <title>Welcome to South Africa</title>
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="styles/style.css">
+
+    <!-- JS -->
+    <script src="scripts/script.js" defer></script>
+</head>
+
+<body>
+
+    <!-- Header -->
+    <header>
+        <h1>Welcome to South Africa</h1>
+        <nav>
+            <ul>
+                <li><a href="#culture">Culture</a></li>
+                <li><a href="#landscapes">Landscapes</a></li>
+                <li><a href="#weather">Weather</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Main content -->
+    <main>
+
+        <!-- Hero Section -->
+        <section id="hero">
+            <picture>
+                <source srcset="images/hero-small.webp" media="(max-width: 500px)">
+                <source srcset="images/hero-medium.webp" media="(max-width: 1000px)">
+                <img src="images/south-african-view.jpg" alt="Scenic view of South Africa">
+            </picture>
+        </section>
+
+        <!-- Culture Section -->
+        <section id="culture">
+            <h2>Culture</h2>
+            <p>South Africa is known for its diverse cultures, languages, and traditions.</p>
+        </section>
+
+        <!-- Landscapes Section -->
+        <section id="landscapes">
+            <h2>Landscapes</h2>
+            <p>The country features breathtaking landscapes including mountains, beaches, and wildlife reserves.</p>
+        </section>
+
+        <!-- Weather Section -->
+        <section id="weather">
+            <h2>Weather ⛅</h2>
+            <p>Current Temperature: <span id="temperature">8</span> °C</p>
+            <p>Wind Speed: <span id="windSpeed">10</span> km/h</p>
+            <p>Wind Chill: <span id="windChill">--</span> °C</p>
+            <img src="images/weather.svg" alt="Cloudy weather icon">
+        </section>
+
+    </main>
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2026 Martha Sibiya. Last Modified: <span id="lastModified"></span></p>
+    </footer>
+
+</body>
+
+</html>
