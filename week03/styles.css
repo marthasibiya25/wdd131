@@ -1,12 +1,16 @@
-/* root variables */
+/* =========================
+   Root Variables (REQUIRED)
+   ========================= */
 :root {
     --primary-color: #005f73;
     --secondary-color: #0a9396;
     --background-color: #f4f4f4;
-    --text-color: #222;
+    --text-color: #000;
 }
 
-/* reset */
+/* =========================
+   Global Reset
+   ========================= */
 body {
     margin: 0;
     font-family: Arial, sans-serif;
@@ -14,7 +18,9 @@ body {
     color: var(--text-color);
 }
 
-/* header */
+/* =========================
+   Header
+   ========================= */
 header {
     background-color: var(--primary-color);
     color: white;
@@ -22,7 +28,9 @@ header {
     padding: 1rem;
 }
 
-/* main layout using grid */
+/* =========================
+   Main Layout (CSS Grid)
+   ========================= */
 main {
     max-width: 1000px;
     margin: auto;
@@ -31,22 +39,35 @@ main {
     padding: 1rem;
 }
 
-/* hero image */
+/* =========================
+   Hero Image
+   ========================= */
 .hero img {
     width: 100%;
     height: auto;
-}
-
-/* weather section decoration using ::after */
-#weather::after {
-    content: "";
     display: block;
-    height: 2px;
-    background-color: var(--secondary-color);
-    margin-top: 0.5rem;
 }
 
-/* footer */
+/* =========================
+   Sections
+   ========================= */
+section {
+    background-color: white;
+    padding: 1rem;
+    border-radius: 6px;
+}
+
+/* =========================
+   Weather Icon (::after REQUIRED)
+   ========================= */
+#weather h2::after {
+    content: " ⛅";
+    margin-left: 0.5rem;
+}
+
+/* =========================
+   Footer
+   ========================= */
 footer {
     background-color: var(--secondary-color);
     color: white;
@@ -54,7 +75,9 @@ footer {
     padding: 0.75rem;
 }
 
-/* media query */
+/* =========================
+   Media Query (REQUIRED)
+   ========================= */
 @media (min-width: 600px) {
     main {
         grid-template-columns: 1fr 1fr;
