@@ -1,17 +1,20 @@
-const temperature = 8; // °C
-const windSpeed = 10;  // km/h
+const temperature = 8;
+const windSpeed = 10;
 
-function calculateWindChill(tempC, windKmh) {
-    if (tempC <= 10 && windKmh > 4.8) {
+function calculateWindChill(temp, speed) {
+    if (temp <= 10 && speed > 4.8) {
         return Math.round(
-            13.12 + 0.6215 * tempC - 11.37 * Math.pow(windKmh, 0.16) + 0.3965 * tempC * Math.pow(windKmh, 0.16)
+            13.12 + 0.6215 * temp -
+            11.37 * Math.pow(speed, 0.16) +
+            0.3965 * temp * Math.pow(speed, 0.16)
         );
-    } else {
-        return "N/A";
     }
+    return "N/A";
 }
 
-document.getElementById("windChill").textContent = calculateWindChill(temperature, windSpeed);
-document.getElementById("lastModified").textContent = document.lastModified;
 document.getElementById("year").textContent = new Date().getFullYear();
+document.getElementById("lastModified").textContent = document.lastModified;
+
+const chill = calculateWindChill(temperature, windSpeed);
+document.getElementById("windChill").textContent = chill;
 

@@ -1,59 +1,40 @@
 :root {
-    --main-color: #006400;
-    --accent-color: #FFD700;
+    --primary-color: #006400;
+    --accent-color: #f4c430;
 }
 
-/* Reset & basic styles */
 body {
     font-family: Arial, sans-serif;
-    background-color: var(--bg-color);
-    color: #333;
     margin: 0;
     padding: 0;
 }
 
-header,
-footer {
-    background-color: var(--main-color);
+header {
+    background-color: var(--primary-color);
     color: white;
     padding: 1rem;
     text-align: center;
 }
 
-nav ul {
-    list-style: none;
-    padding: 0;
-    display: flex;
-    justify-content: center;
-    gap: 2rem;
-}
-
-nav a {
-    color: white;
-    text-decoration: none;
-}
-
 main {
-    padding: 2rem;
+    max-width: 900px;
+    margin: auto;
+    padding: 1rem;
 }
 
-section {
-    margin-bottom: 2rem;
-}
-
-/* Hero Image */
-#hero img {
-    width: 100%;
-    height: auto;
-}
-
-#weather::after {
+#weather h2::after {
     content: " ⛅";
 }
 
-@media (max-width: 768px) {
-    nav ul {
-        display: flex;
-        flex-direction: column;
+footer {
+    text-align: center;
+    padding: 1rem;
+    background-color: #eee;
+}
+
+/* Media Query */
+@media (max-width: 600px) {
+    body {
+        font-size: 0.95rem;
     }
 }
