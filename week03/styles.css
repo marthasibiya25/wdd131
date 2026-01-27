@@ -1,0 +1,33 @@
+/* Global variables */
+:root {
+    --primary-color: #0077b6;
+    --secondary-color: #caf0f8;
+    --font-main: 'Arial', sans-serif;
+}
+
+/* General body styling */
+body {
+    font-family: var(--font-main);
+    margin: 0;
+    padding: 0;
+    line-height: 1.6;
+}
+
+/* Hero image responsiveness */
+header img {
+    width: 100%;
+    height: auto;
+}
+
+/* Weather pseudo-element for large view */
+#weather h2::after {
+    content: " ⛅";
+    display: inline-block;
+}
+
+/* Media queries */
+@media (max-width: 768px) {
+    body {
+        font-size: 14px;
+    }
+}

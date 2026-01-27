@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Country Page</title>
+    <link rel="stylesheet" href="styles/style.css">
+    <script defer src="scripts/script.js"></script>
+</head>
+
+<body>
+    <!-- Hero Section -->
+    <header>
+        <picture>
+            <source srcset="images/hero-small.webp" media="(max-width: 500px)">
+            <source srcset="images/hero-medium.webp" media="(max-width: 1000px)">
+            <img src="images/hero-large.webp" alt="Country View">
+        </picture>
+        <h1>Welcome to [Country Name]</h1>
+    </header>
+
+    <!-- Weather Section -->
+    <section id="weather">
+        <h2>Weather <span class="emoji-weather">⛅</span></h2>
+        <p>Temperature: <span id="temp">5°C</span></p>
+        <p>Wind Speed: <span id="wind">15 km/h</span></p>
+        <p>Wind Chill: <span id="windChill">N/A</span></p>
+    </section>
+
+    <!-- Content Sections -->
+    <section id="culture">
+        <h2>Culture</h2>
+        <p>...</p>
+    </section>
+
+    <section id="tourism">
+        <h2>Tourism</h2>
+        <p>...</p>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy; <span id="currentYear"></span> | Last modified: <span id="lastModified"></span></p>
+    </footer>
+</body>
+
+</html>
