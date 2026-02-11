@@ -1,0 +1,43 @@
+body {
+    font-family: 'Open Sans', sans-serif;
+    background-color: #f1faee;
+    margin: 0;
+    padding: 0;
+    line-height: 1.6;
+}
+
+header {
+    background-color: #006d77;
+    color: white;
+    text-align: center;
+    padding: 1rem;
+}
+
+h1,
+h2,
+h3 {
+    font-family: 'Montserrat', sans-serif;
+    color: #006d77;
+}
+
+section {
+    padding: 1rem 2rem;
+}
+
+ul {
+    padding-left: 20px;
+}
+
+footer {
+    background-color: #006d77;
+    color: white;
+    text-align: center;
+    padding: 1rem;
+    margin-top: 2rem;
+}
+
+pre {
+    background-color: #e9ecef;
+    padding: 1rem;
+    overflow-x: auto;
+}
