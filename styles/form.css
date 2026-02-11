@@ -74,3 +74,17 @@ footer {
     background-color: #006d77;
     color: white;
 }
+
+/* Mobile adjustments for small screens */
+@media (max-width: 600px) {
+    main {
+        padding: 1rem;
+    }
+
+    input[type=text],
+    input[type=date],
+    select,
+    textarea {
+        width: 100%;
+    }
+}
