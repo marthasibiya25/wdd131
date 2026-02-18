@@ -1,37 +1,48 @@
-// Array to store goals
-const goals = [];
+// Highlight active nav link
+const navLinks = document.querySelectorAll('header nav ul li a');
+navLinks.forEach(link => {
+    link.addEventListener('click', () => {
+        navLinks.forEach(l => l.classList.remove('active'));
+        link.classList.add('active');
+    });
+});
 
-// Function to display goals
-function displayGoals() {
-    const container = document.getElementById('goalList');
-    container.innerHTML = '';
-    goals.forEach((goal, index) => {
-        container.innerHTML += `<li>${goal.completed ? '✅' : '❌'} ${goal.name}
-        <button onclick="toggleComplete(${index})">Toggle</button></li>`;
+// Animate cards on scroll
+const cards = document.querySelectorAll('.features .card');
+window.addEventListener('scroll', () => {
+    cards.forEach(card => {
+        const rect = card.getBoundingClientRect();
+        if (rect.top < window.innerHeight - 100) {
+            card.style.transform = "translateY(0)";
+            card.style.opacity = 1;
+        } else {
+            card.style.transform = "translateY(50px)";
+            card.style.opacity = 0;
+        }
+    });
+});
+
+// LocalStorage Greeting (from previous code)
+const nameInput = document.getElementById('name');
+const greeting = document.getElementById('greeting');
+
+if (localStorage.getItem('userName')) {
+    greeting.textContent = `Welcome back, ${localStorage.getItem('userName')}!`;
+}
+
+if (nameInput) {
+    nameInput.addEventListener('change', () => {
+        localStorage.setItem('userName', nameInput.value);
+        greeting.textContent = `Welcome, ${nameInput.value}!`;
     });
 }
 
-// Function to toggle completion
-function toggleComplete(index) {
-    goals[index].completed = !goals[index].completed;
-    localStorage.setItem('goals', JSON.stringify(goals));
-    displayGoals();
+// Contact Form Alert
+const contactForm = document.getElementById('contactForm');
+if (contactForm) {
+    contactForm.addEventListener('submit', (e) => {
+        e.preventDefault();
+        alert('Thank you! Your message has been sent.');
+        contactForm.reset();
+    });
 }
-
-// Add goal button
-document.getElementById('addGoalBtn')?.addEventListener('click', () => {
-    const input = document.getElementById('newGoal');
-    if(input.value !== '') {
-        goals.push({ name: input.value, completed: false });
-        localStorage.setItem('goals', JSON.stringify(goals));
-        displayGoals();
-        input.value = '';
-    }
-});
-
-// Load saved goals
-const storedGoals = JSON.parse(localStorage.getItem('goals'));
-if(storedGoals) {
-    storedGoals.forEach(goal => goals.push(goal));
-}
-displayGoals();
